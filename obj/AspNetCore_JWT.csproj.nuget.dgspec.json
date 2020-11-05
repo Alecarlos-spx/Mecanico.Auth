@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_Jwt\\AspNetCore_JWT\\AspNetCore_JWT\\AspNetCore_JWT.csproj": {}
+  },
+  "projects": {
+    "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_Jwt\\AspNetCore_JWT\\AspNetCore_JWT\\AspNetCore_JWT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_Jwt\\AspNetCore_JWT\\AspNetCore_JWT\\AspNetCore_JWT.csproj",
+        "projectName": "AspNetCore_JWT",
+        "projectPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_Jwt\\AspNetCore_JWT\\AspNetCore_JWT\\AspNetCore_JWT.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\projetos\\ExemplosTreino\\AspNetCore21\\AspNetCore_Jwt\\AspNetCore_JWT\\AspNetCore_JWT\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.12.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
