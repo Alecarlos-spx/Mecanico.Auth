@@ -18,9 +18,18 @@ namespace AspNetCore_JWT.ConfigStartup
     {
         public static IServiceCollection AddIdentityConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AuthDBContext>(options =>
-                    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            var statusApp = configuration.GetValue<string>("StatusApp");
 
+            if (statusApp == "Producao")
+            {
+                services.AddDbContext<AuthDBContext>(options =>
+                    options.UseSqlServer(configuration.GetConnectionString("ProducaoConnection")));
+            }
+            else
+            {
+                services.AddDbContext<AuthDBContext>(options =>
+                    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            }
             services.AddDefaultIdentity<IdentityUser>(options =>
             {
                 options.SignIn.RequireConfirmedEmail = true;
@@ -31,7 +40,21 @@ namespace AspNetCore_JWT.ConfigStartup
 
             // JWT
             // acesso à seção do arq appSettings
-            var appSettingsSection = configuration.GetSection("AppSettings");
+            var appSettingsSection = configuration.GetSection("");
+
+
+
+            if (statusApp == "Producao")
+            {
+                appSettingsSection = configuration.GetSection("AppSettingsProducao");
+            }
+            else
+            {
+                appSettingsSection = configuration.GetSection("AppSettings");
+            }
+
+
+
 
             // config com parametros
             services.Configure<TokenSettings>(appSettingsSection);

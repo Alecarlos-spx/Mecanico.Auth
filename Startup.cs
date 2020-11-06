@@ -83,7 +83,7 @@ namespace AspNetCore_JWT
             services.AddTransient<IEmailServices, EmailServices>();
 
             // add config sendGrid
-            services.Configure<SendGridOptions>(Configuration.GetSection("SendGridOptions"));
+            //services.Configure<SendGridOptions>(Configuration.GetSection("SendGridOptions"));
 
         }
 
