@@ -194,10 +194,10 @@ namespace AspNetCore_JWT.Controllers
                 confirmEmail.UserId = userId;
                 var retorno = await _userManager.ConfirmEmailAsync(user, confirmEmail.Code);
 
-                //buscar no banco de dados empresa o site para redirecionar
+            //buscar no banco de dados empresa o site para redirecionar
 
-                var siteEmpresa = "https://localhost:44303/";
-
+            //var siteEmpresa = "https://localhost:44303/";
+            var siteEmpresa = "https://mecanicoweb.azurewebsites.net";
                 return Redirect(siteEmpresa);
             }
         }
@@ -308,8 +308,12 @@ namespace AspNetCore_JWT.Controllers
 
 
             //criar link para retorno
-            var callbackUrl = "Link para confirmação de email do sistema de Auto Mecanica, clique e será redirecionado para pagina de confirmação. "
-                + Url.ConfirmEmailCallbackLink(user.Id, HttpUtility.UrlEncode(code), Request.Scheme);
+            var callbackUrl = 
+                $"Por favor para confirmação seu email do sistema de Auto Mecanica, clique e será redirecionado para pagina de login." +
+                $" <a href='{ Url.ConfirmEmailCallbackLink(user.Id, HttpUtility.UrlEncode(code), Request.Scheme)}'>Clique Aqui!!</a>";
+
+           // $"Por favor para confirmar seu email clique nesse link: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>"
+
 
             //método de extensão de URL
             var result = await _emailServices.SendEmailBySmtpAsync(user.Email, "Confirmação de email", callbackUrl);
