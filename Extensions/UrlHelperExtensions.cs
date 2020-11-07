@@ -19,7 +19,7 @@ namespace AspNetCore_JWT.Extensions
         //return $"{scheme}://localhost:5000/api/v1/Login/confirmEmail?userId={userId}&code={code}";
 
 
-            return $"{scheme}://mecanicoweb.azurewebsites.net/api/v1/Login/confirmEmail?userId={userId}&code={code}";
+            return $"{scheme}://mecanicoapiauth.azurewebsites.net/api/v1/Login/confirmEmail?userId={userId}&code={code}";
         
         }
     }
