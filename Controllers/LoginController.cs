@@ -309,8 +309,8 @@ namespace AspNetCore_JWT.Controllers
 
             //criar link para retorno
             var callbackUrl = 
-                $"Por favor para confirmação seu email do sistema de Auto Mecanica, clique e será redirecionado para pagina de login." +
-                $" <a href='{ Url.ConfirmEmailCallbackLink(user.Id, HttpUtility.UrlEncode(code), Request.Scheme)}'>Clique Aqui!!</a>";
+                $"<html><body>Por favor para confirmação seu email do sistema de Auto Mecanica, clique e será redirecionado para pagina de login." +
+                $"<a href='{ Url.ConfirmEmailCallbackLink(user.Id, HttpUtility.UrlEncode(code), Request.Scheme)}'>Clique Aqui!!</a></body></html>";
 
            // $"Por favor para confirmar seu email clique nesse link: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>"
 

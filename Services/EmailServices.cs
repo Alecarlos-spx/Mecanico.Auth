@@ -35,6 +35,8 @@ namespace AspNetCore_JWT.Services
                 mensagemDeEmail.Subject = assunto;
                 mensagemDeEmail.To.Add(email);
                 mensagemDeEmail.Body = mensagem;
+                mensagemDeEmail.IsBodyHtml = true;
+                
 
 
                 //SMTP - Simple Mail Transport Protocol
